@@ -1,64 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Friendship Starts from Grade 10</title>
+<title>Our Friendship Starts from Grade 10</title>
 
-    <style>
-        body {
-            background-color: #f5eee5;
-            font-family: Georgia, serif;
-            color: #493729;
-            margin: 0;
-            padding: 30px 15px;
-        }
+<style>
 
-        .book {
-            background-color: #fffaf3;
-            max-width: 750px;
-            margin: auto;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px #d6c5b2;
-        }
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        h1 {
-            text-align: center;
-            color: #876447;
-            font-size: 32px;
-        }
+body {
+    margin: 0;
+    background: #eee3d5;
+    color: #493729;
+    font-family: Georgia, serif;
+}
 
-        h2 {
-            text-align: center;
-            color: #a17b5c;
-            margin-top: 45px;
-        }
+.cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: #f8efe4;
+    border: 12px double #b99a7b;
+}
 
-        h3 {
-            color: #876447;
-        }
+.cover h1 {
+    font-size: clamp(36px, 7vw, 65px);
+    color: #79563e;
+    max-width: 850px;
+}
 
-        p {
-            font-size: 17px;
-            line-height: 1.9;
-        }
+.cover p {
+    font-style: italic;
+    font-size: 19px;
+}
 
-        .author {
-            text-align: right;
-            font-style: italic;
-        }
-    </style>
+button {
+    background: #886447;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #60452f;
+}
+
+.book {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 45px;
+    background: #fffaf3;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px #cbb8a3;
+}
+
+h2 {
+    text-align: center;
+    color: #956d4c;
+}
+
+h3 {
+    color: #79563e;
+}
+
+p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.toc {
+    text-align: center;
+    padding: 35px 10px;
+    border-bottom: 1px solid #cbb8a3;
+}
+
+.toc a {
+    display: block;
+    color: #79563e;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+.chapter {
+    padding-top: 35px;
+}
+
+.author {
+    text-align: right;
+    font-style: italic;
+    color: #956d4c;
+}
+
+.flower {
+    font-size: 25px;
+    text-align: center;
+    color: #a47d60;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #79563e;
+}
+
+@media(max-width: 600px) {
+    .book {
+        padding: 25px;
+        margin: 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="book">
+<!-- COVER PAGE -->
+
+<section class="cover">
+
+    <div class="flower">✿ ❀ ✿</div>
+
+    <p>A STORY OF FRIENDSHIP, MEMORIES & GROWING UP</p>
 
     <h1>Our Friendship Starts from Grade 10</h1>
 
-    <hr>
+    <div class="flower">♡</div>
+
+    <p>Written by Emma</p>
+
+    <button onclick="document.getElementById('contents').scrollIntoView()">
+        Start Reading ♡
+    </button>
+
+</section>
+
+
+<!-- TABLE OF CONTENTS -->
+
+<div class="book toc" id="contents">
+
+    <h2>Table of Contents</h2>
+
+    <div class="flower">✿</div>
+
+    <a href="#chapter1">Chapter One — Dear Cendy</a>
+
+    <a href="#chapter2">Chapter Two — Coming Soon</a>
+
+</div>
+
+
+<!-- CHAPTER ONE -->
+
+<div class="book chapter" id="chapter1">
+
+    <div class="flower">❀</div>
 
     <h2>Chapter One</h2>
 
@@ -158,7 +279,47 @@
 
     <p class="author">Emma.</p>
 
+    <div class="flower">♡ ❀ ♡</div>
+
+    <center>
+        <button onclick="window.scrollTo(0,0)">
+            Back to Cover ↑
+        </button>
+    </center>
+
 </div>
+
+
+<!-- CHAPTER TWO -->
+
+<div class="book chapter" id="chapter2">
+
+    <div class="flower">✿</div>
+
+    <h2>Chapter Two</h2>
+
+    <h3>Coming Soon...</h3>
+
+    <p style="text-align:center">
+        Every friendship has another chapter waiting to be written.
+    </p>
+
+    <p class="author">Emma.</p>
+
+</div>
+
+
+<footer class="footer">
+
+    <div class="flower">♡</div>
+
+    <p>Our Friendship Starts from Grade 10</p>
+
+    <p>Written with memories, by Emma.</p>
+
+    <p>© 2026</p>
+
+</footer>
 
 </body>
 </html>
